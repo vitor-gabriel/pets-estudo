@@ -4,5 +4,6 @@
         "angular-*": {
             "externalTemplate": true
         }
-    }
+    },
+    "totvsLanguageServer.editor.linter.includes": "C:\\TOTVS\\Utils\\Includes"
 }

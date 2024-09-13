@@ -1,3 +1,3 @@
-User Function callMeusPets()
+Function callMeusPets()
     FwCallApp("meus-pets-oficial")
 Return

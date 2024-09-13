@@ -1,3 +1,29 @@
-<po-page-default p-title="Owners">
-    <p>owners works!</p>
+<po-page-default
+  p-title="Tutores"
+  [p-actions]="actions"
+  [p-breadcrumb]="breadcrumb">
+
+  <div class="po-mb-1" *ngIf="owners.items.length > 0">
+    <po-tag [p-value]="textRemainingRecords"></po-tag>
+  </div>
+
+  <po-table
+    [p-striped]="true"
+    [p-columns]="columns"
+    [p-items]="owners.items"
+    [p-loading]="isLoading"
+    [p-show-more-disabled]="!hasNextPage"
+    (p-show-more)="showMore()"
+    [p-loading-show-more]="isLoading">
+  </po-table>
+
+  <!-- <po-widget *ngFor="let owner of owners.items">
+    <span>{{owner.id}} - {{owner.name}}</span>
+  </po-widget> -->
+  <table border="1">
+    <tr *ngFor="let owner of owners.items">
+      <td>{{owner.id}}</td>
+      <td>{{owner.name}}</td>
+    </tr>
+  </table>
 </po-page-default>

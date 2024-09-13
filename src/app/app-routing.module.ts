@@ -6,7 +6,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'index.html', pathMatch: 'full' },
   { path: 'index.html', component: HomeComponent },
   { path: 'owners', loadChildren: () => import('./features/owners/owners.module').then(m => m.OwnersModule) },
-  //{ path: 'pets', loadChildren: () => import('./features/pets/pets.module').then(m => m.PetsModule) }
+  { path: 'pets', loadChildren: () => import('./features/pets/pets.module').then(m => m.PetsModule) }
 ];
 
 @NgModule({
